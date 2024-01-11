@@ -1,9 +1,16 @@
 // app.js
+import axios from 'axios';
 import express from 'express';
+import cors from 'cors';
 
 const app = express()
 
+app.use(cors())
 const port = 3000;
+
+const api = axios.create({
+  baseURL: ""
+})
 
 // Middleware para tratar JSON
 app.use(express.json());
